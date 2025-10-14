@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>TECHGP - Courses</title>
+  <link rel="stylesheet" href="../INTERFACE/interface.css">
+  <link rel="stylesheet" href="home.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <div class="navbar">
+    <div class="logo">
+      <a href="home.html"><img src="TECHGP.png" alt="TECHGP Logo"></a>
+      TECHGP
+    </div>
+    <div class="nav-links">
+      <a href="home.html">Home</a>
+      <a href="courses.php">Courses</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  <div class="dropdown">
+        <button class="dropbtn" id="profileBtn">
+          <img src="profile.jpg" alt="Profile Logo">
+        </button>
+        <div class="dropdown-content" id="dropdownMenu">
+          <a href="profile.php">Profile</a>
+          <a href="my_courses.php">My Courses</a>
+          <a href="#">Progress</a>
+          <a href="#">Settings</a>
+          <a href="../INTERFACE/interface.css">Logout</a>
+        </div>
+      </div>
+      </div>
+
+  <!-- Courses Intro -->
+  <div class="about">
+    <h2>Our Courses</h2>
+    <p>
+      At <strong>TECHGP</strong>, we bring industry-relevant courses designed to build your 
+      technical and professional skills. Our programs are developed with inputs from 
+      industry experts and experienced faculty members, ensuring students gain practical 
+      knowledge that enhances their employability.
+    </p>
+  </div>
+
+  <!-- Why Take Our Courses -->
+  <div class="about">
+    <h2>Why Choose TECHGP Courses?</h2>
+    <ul>
+      <li>🌐 <strong>Blended Learning:</strong> Combination of online and campus-based learning for better flexibility.</li>
+      <li>🎯 <strong>Industry-Relevant:</strong> Courses designed with latest tools, technologies, and practices.</li>
+      <li>💡 <strong>Practical Approach:</strong> Real-time projects and hands-on sessions included.</li>
+      <li>📈 <strong>Career Growth:</strong> Learn skills demanded by top recruiters.</li>
+      <li>👩‍🏫 <strong>Expert Mentors:</strong> Faculty guidance and mentorship throughout the learning journey.</li>
+    </ul>
+  </div>
+
+  <!-- Benefits -->
+  <div class="about">
+    <h2>Benefits of Learning with TECHGP</h2>
+    <p>When you enroll in our courses, you gain much more than knowledge:</p>
+    <ul>
+      <li>Access to recorded video lectures anytime, anywhere.</li>
+      <li>Assignments, quizzes, and mini-projects to strengthen understanding.</li>
+      <li>Peer-to-peer learning and discussion forums.</li>
+      <li>Career counseling and placement assistance.</li>
+      <li>Internship opportunities through partnering companies.</li>
+    </ul>
+  </div>
+
+  <!-- Certificates -->
+  <div class="about">
+    <h2>Certificates You Earn</h2>
+    <p>
+      On successful completion of each course, students receive a 
+      <strong>TECHGP Verified Certificate</strong>. These certificates:
+    </p>
+    <ul>
+      <li>✔️ Showcase your skills and achievements to employers.</li>
+      <li>✔️ Add credibility to your academic and professional portfolio.</li>
+      <li>✔️ Help in higher studies, job applications, and internships.</li>
+      <li>✔️ Provide recognition across partnering institutes and industries.</li>
+    </ul>
+  </div>
+
+  <!-- Course Categories -->
+  <div class="about">
+    <h2>Course Categories We Offer</h2>
+    <ul>
+      <li>💻 Computer Science & AI</li>
+      <li>📊 Data Science & Analytics</li>
+      <li>🌐 Web & Mobile Development</li>
+      <li>⚙️ Mechanical & Electrical Engineering</li>
+      <li>🏥 Health & Pharmacy</li>
+      <li>📈 Management & Entrepreneurship</li>
+    </ul>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 TECHGP - Campus Course Portal | All Rights Reserved</p>
+  </footer>
+
+  <script>
+    // Dropdown
+    const profileBtn = document.getElementById("profileBtn");
+    const dropdownMenu = document.getElementById("dropdownMenu");
+    profileBtn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      dropdownMenu.classList.toggle("show");
+    });
+    document.addEventListener("click", () => {
+      dropdownMenu.classList.remove("show");
+    });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,228 @@
+/* Smooth Scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* General */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #fff;
+  color: #333;
+}
+
+/* Navbar */
+.navbar {
+  background: #003366;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;   /* ✅ circular logo */
+  margin-right: 10px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-size: 22px;
+  font-weight: bold;
+  color: white;
+}
+
+.nav-links {
+  display: flex;
+  gap: 15px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+/* Hamburger (hidden on desktop) */
+.hamburger {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: white;
+}
+
+/* ===================== */
+/* Stats Section */
+/* ===================== */
+.stats-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 30px;
+  background: #003366;
+  flex-wrap: wrap;
+}
+
+.stat-box {
+  flex: 1 1 180px;
+  min-width: 180px;
+  border-radius: 10px;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  height: auto;
+}
+
+.stat-box h3 {
+  font-size: 28px;
+  margin: 10px 0;
+}
+
+
+/* Tablet: 2 per row */
+@media (max-width: 992px) {
+  .stat-box {
+    flex: 1 1 45%;
+    max-width: 45%;
+  }
+}
+
+/* Mobile: 1 per row */
+@media (max-width: 600px) {
+  .stats-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .stat-box {
+    flex: 1 1 100%;
+    max-width: 100%;
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  .stat-box h3 {
+    font-size: 22px;
+  }
+}
+
+/* ===================== */
+/* Video Section */
+/* ===================== */
+.section-title {
+  text-align: center;
+  font-size: 28px;
+  margin: 40px 0 20px;
+  font-weight: bold;
+  color: #2c3e50;
+  border-bottom: 3px solid #f39c12;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.video-section {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+/* ===================== */
+/* About, Courses, Login, Registration */
+/* ===================== */
+.about {
+  padding: 20px;
+  max-width: 900px;
+  margin: auto;
+}
+
+.about h2 {
+  color: #003366;
+}
+
+/* Forms */
+form input {
+  width: 100%;
+  max-width: 400px;
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+form button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background: #003366;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background: #0055aa;
+}
+
+/* ===================== */
+/* Contact */
+/* ===================== */
+.contact {
+  background: #eef2f7;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 8px;
+}
+
+/* ===================== */
+/* Footer */
+/* ===================== */
+footer {
+  background: #003366;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+  font-size: 14px;
+}
+
+/* ===================== */
+/* Responsive Navbar */
+/* ===================== */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;              /* hide links by default */
+    flex-direction: column;
+    width: 100%;
+    background: #003366;
+    padding: 10px 0;
+  }
+
+  .nav-links a {
+    margin: 10px 0;
+    text-align: center;
+    display: block;
+  }
+
+  .nav-links.active {
+    display: flex;             /* show when hamburger clicked */
+  }
+
+  .hamburger {
+    display: block;            /* show hamburger */
+  }
+
+  .navbar {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}

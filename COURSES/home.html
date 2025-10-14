@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>TECHGP - Courses</title>
+  <link rel="stylesheet" href="home.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <div class="navbar">
+    <div class="logo">
+      <a href="home.html">
+        <img src="TECHGP.png" alt="TECHGP Logo">
+      </a>
+      TECHGP
+    </div>
+    <div class="nav-links">
+      <a href="#top">Home</a>
+      <a href="about.html">About</a>
+      <a href="courses.php">Courses</a>
+      <a href="contact.html">Contact</a>
+
+      <!-- Profile Dropdown -->
+      <div class="dropdown">
+        <button class="dropbtn" id="profileBtn">
+          <img src="profile.jpg" alt="Profile Logo">
+        </button>
+        <div class="dropdown-content" id="dropdownMenu">
+          <a href="profile.php">Profile</a>
+          <a href="my_courses.php">My Courses</a>
+          <a href="#">Progress</a>
+          <a href="#">Settings</a>
+          <a href="../INTERFACE/interface.html">Logout</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Search Section -->
+  <div class="search-section">
+    <input type="text" placeholder="Search TECHGP Courses...">
+    <button>🔍</button>
+  </div>
+
+  <!-- Notifications -->
+  <div class="notifications">
+    <h3> Internship Notifications</h3>
+    <p>AI/ML Internship at Google - Apply by Sept 20, 2025</p>
+    <p>Web Development Internship at Microsoft - Apply by Sept 25, 2025</p>
+    <p>Data Science Internship at Infosys - Apply by Sept 30, 2025</p>
+    <p>Cybersecurity Internship at TCS - Apply by Oct 5, 2025</p>
+  </div>
+
+  <!-- Courses Section -->
+  <div class="courses-section">
+    
+    <!-- Resume Course (fixed left) -->
+    <div class="resume">
+      <h3> Continue Your Course</h3>
+      <iframe src="https://www.youtube.com/embed/mq5KkmFH3q8"
+        title="Resume Course"
+        frameborder="0" allowfullscreen></iframe>
+    </div>
+
+    <!-- Recommended Courses Slider (right) -->
+    <div class="recommended">
+      <h3> Recommended Courses</h3>
+      <div class="slider-wrap">
+        <button class="arrow left" id="prevBtn">‹</button>
+        <div class="slider" id="slider">
+          <div class="card" data-video="2ePf9rue1Ao">
+            <img src="https://img.youtube.com/vi/2ePf9rue1Ao/hqdefault.jpg" alt="">
+            <p>🤖 AI Basics</p>
+          </div>
+          <div class="card" data-video="zOjov-2OZ0E">
+            <img src="https://img.youtube.com/vi/zOjov-2OZ0E/hqdefault.jpg" alt="">
+            <p>🐍 Python for Beginners</p>
+          </div>
+          <div class="card" data-video="tgbNymZ7vqY">
+            <img src="https://img.youtube.com/vi/tgbNymZ7vqY/hqdefault.jpg" alt="">
+            <p>💻 Web Development</p>
+          </div>
+          <div class="card" data-video="mq5KkmFH3q8">
+            <img src="https://img.youtube.com/vi/mq5KkmFH3q8/hqdefault.jpg" alt="">
+            <p>📘 Online Learning</p>
+          </div>
+        </div>
+        <button class="arrow right" id="nextBtn">›</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 TECHGP - Campus Course Portal | All Rights Reserved</p>
+  </footer>
+
+  <!-- Script -->
+  <script>
+    // Dropdown
+    const profileBtn = document.getElementById("profileBtn");
+    const dropdownMenu = document.getElementById("dropdownMenu");
+    profileBtn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      dropdownMenu.classList.toggle("show");
+    });
+    document.addEventListener("click", () => {
+      dropdownMenu.classList.remove("show");
+    });
+
+    // Slider
+    const slider = document.getElementById("slider");
+    const prev = document.getElementById("prevBtn");
+    const next = document.getElementById("nextBtn");
+
+    prev.addEventListener("click", () => {
+      slider.scrollBy({ left: -250, behavior: "smooth" });
+    });
+    next.addEventListener("click", () => {
+      slider.scrollBy({ left: 250, behavior: "smooth" });
+    });
+
+    // Open video on card click
+    slider.addEventListener("click", (e) => {
+      const card = e.target.closest(".card");
+      if (!card) return;
+      const videoId = card.dataset.video;
+      window.open(`https://www.youtube.com/watch?v=${videoId}`, "_blank");
+    });
+  </script>
+
+</body>
+</html>

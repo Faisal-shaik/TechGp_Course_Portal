@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TECHGP - Home</title>
+  <link rel="stylesheet" href="interface.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <div class="navbar">
+    <div class="logo">
+      <a href="interface.html">
+        <img src="TECHGP.png" alt="TECHGP Logo">
+      </a>
+      TECHGP
+    </div>
+
+    <!-- Hamburger Icon -->
+    <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+
+    <!-- Nav Links -->
+    <div class="nav-links" id="navLinks">
+      <a href="interface.html">Home</a>
+      <a href="courses.html">Courses</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="login.php">Login</a>
+      <a href="registration.html">Registration</a>
+    </div>
+  </div>
+
+  <!-- Stats Section -->
+  <div class="stats-container">
+    <div class="stat-box blue"><h3>0</h3><p>Total Courses</p></div>
+    <div class="stat-box pink"><h3>0</h3><p>Student Enrollment</p></div>
+    <div class="stat-box purple"><h3>0</h3><p>Successful Certifications</p></div>
+  </div>
+
+  <!-- Video Section -->
+  <h2 class="section-title">The Future of Online Learning</h2>
+  <div class="video-section">
+    <iframe width="560" height="315"
+      src="https://www.youtube.com/embed/mq5KkmFH3q8"
+      title="The Rise of Online Learning in India"
+      frameborder="0" allowfullscreen>
+    </iframe>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 TECHGP - Campus Course Portal | All Rights Reserved</p>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById("navLinks").classList.toggle("active");
+    }
+  </script>
+
+</body>
+</html>
